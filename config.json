@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cursor-sh/cursor/v0.1.0/schema/cursor-config.schema.json",
+  "name": "Universal SaaS Starter",
+  "description": "Standard rules for initializing clean, scalable projects with AI assistance.",
+  "rules": [
+    "--- 🧱 Project Initialization ---",
+    "Before creating README.md or TASK.md, read the entire project directory to understand the file structure, tech stack, and existing modules.",
+    "Use the directory structure and filenames to infer frameworks, languages, services, and architecture.",
+    "Summarize your findings before generating any documentation.",
+    "Only then generate README.md with the following sections: Overview, Features, Tech Stack, Folder Structure, Setup, Running Locally, Environment Variables, and License.",
+    "For TASK.md, identify any TODOs, work-in-progress modules, or missing files that imply tasks and document them accordingly.",
+    "Always create a `README.md` that includes: project purpose, tech stack, setup instructions, and folder structure overview.",
+    "Always create a `TASK.md` to track active tasks, completed tasks, and TODOs. Include dates and concise descriptions.",
+    "Use conventional project structure (e.g., /src, /lib, /components, /tests).",
+    "Use TypeScript where possible. Use clear naming conventions and consistent folder hierarchy.",
+    
+    "--- 🤖 AI Behavior Rules ---",
+    "Never assume missing context — ask clarifying questions.",
+    "Don't invent file paths or modules. Only reference what actually exists.",
+    "Reconfirm goals and scope before generating large outputs.",
+    "Be concise and scoped — avoid bloated code unless asked.",
+    "If the conversation loses clarity, offer a reset or summary.",
+    "If unsure about a spec or requirement, stop and ask the user.",
+    "Do not rely on past turns unless explicitly instructed. Avoid building on potential hallucinations.",
+    "If a task is vague, return a checklist of what needs clarification before proceeding.",
+
+    "--- 🧪 Code & Testing Standards ---",
+    "Keep files under 500 lines. Break up long files into smaller modules.",
+    "Use `/__tests__/` or `*.test.ts` for unit tests, mirroring source structure.",
+    "Each feature should have at least: 1 valid case, 1 edge case, 1 failure test.",
+    "Comment complex logic. Use `// Reason:` to explain why, not just how.",
+    
+    "--- 🔒 Security & Clean Code ---",
+    "Never hardcode secrets or API keys. Use environment variables instead.",
+    "Always check that sensitive configs are in `.gitignore`.",
+    "Use Prettier and ESLint to format and lint all code consistently.",
+    "Use JSDoc for documenting function inputs/outputs.",
+    
+    "--- 🌐 Collaboration & Version Control ---",
+    "Use conventional commits (e.g., feat:, fix:, chore:).",
+    "Create a new branch for each feature or fix.",
+    "All PRs must be scoped, reviewed, and tied to a TASK.md entry.",
+    
+    "--- 🚀 README.md Essentials ---",
+    "Every project must include: project overview, install steps, `.env` setup, and dev commands.",
+    "Mention any third-party services (e.g., Supabase, Stripe) and include their setup if applicable.",
+
+    "--- 📝 TASK.md Essentials ---",
+    "Track tasks in three sections: `Planned`, `In Progress`, `Completed`.",
+    "Include discovered subtasks in a section called `Discovered During Work`.",
+    "Every completed task must include the date and short summary.",
+    
+    "--- 🔁 Dependency & Package Discipline ---",
+    "Avoid adding new dependencies unless necessary. If added, document why in the commit.",
+    "Use exact versions in package.json for critical packages.",
+    "Audit dependencies monthly or after major changes."
+  ]
+}
